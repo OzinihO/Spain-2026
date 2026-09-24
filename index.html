@@ -1,304 +1,94 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#08111f" />
-  <title>טיול כדורגל ושמירת שבת 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>טריפל ספרדי - חבילת הכדורגל</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .glow-logo {
+    filter: drop-shadow(0 0 4px #00f0ff);
+    transition: filter 0.3s ease;
+  }
+  .glow-logo:hover {
+    filter: drop-shadow(0 0 8px #00f0ff);
+  }
+</style>
 </head>
-<body>
-  <div class="bg-orb orb-one"></div>
-  <div class="bg-orb orb-two"></div>
+<body class="bg-slate-900 text-white font-sans">
 
-  <header class="site-header">
-    <nav class="navbar container">
-      <div class="logo">
-        <span class="logo-ball">⚽</span>
-        <span>Football<span>2026</span></span>
-      </div>
+<header class="text-center py-10 px-5 max-w-5xl mx-auto">
+  <h1 class="text-4xl font-extrabold mb-3">טריפל ספרדי - חבילת טיול כדורגל</h1>
+  <p class="text-lg text-slate-300 mb-6">7–14.12.2026, כל השלושה - מנצ'סטר סיטי, ברצלונה, ריאל מדריד, אתלטיקו מדריד ועוד!</p>
+</header>
 
-      <div class="nav-actions">
-        <button id="themeToggle" class="icon-button" aria-label="החלפת מצב תצוגה">☀️</button>
-        <a href="#matches" class="nav-link">משחקים</a>
-        <a href="#food" class="nav-link">אוכל כשר</a>
-        <a href="#community" class="nav-link">קהילה</a>
-      </div>
-    </nav>
+<main class="max-w-5xl mx-auto px-4 space-y-12">
 
-    <section class="hero container">
-      <div class="hero-copy">
-        <div class="eyebrow">מסע בלתי נשכח • דצמבר 2026</div>
-        <h1>
-          כדורגל גדול,
-          <span>חוויה גדולה יותר</span>
-        </h1>
-        <p>
-          כל מה שצריך לטיול כדורגל מושלם במדריד ובברצלונה, תוך שמירה על שבת,
-          כשרות ואווירה יהודית חמה ונעימה.
-        </p>
+  <section aria-label="לוח משחקים ראשי" class="bg-slate-800 p-6 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold mb-6" style="color:#39FF14;">לוח משחקים</h2>
+    <ul class="space-y-8">
 
-        <div class="hero-actions">
-          <a href="#matches" class="primary-btn">גלה את המסלול ✦</a>
-          <button id="infoButton" class="secondary-btn">קבל מידע נוסף</button>
+      <li class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 bg-slate-900 p-4 rounded-xl shadow-md hover:shadow-cyan-500 transition">
+        <div class="flex items-center space-x-4 space-x-reverse">
+          <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg" alt="מנצ'סטר סיטי לוגו" class="w-16 h-16 glow-logo" />
+          <span class="text-xl font-semibold hover:text-cyan-400 transition">מנצ'סטר סיטי</span>
         </div>
-
-        <div class="stats">
-          <div>
-            <strong>2</strong>
-            <span>ערים חמות</span>
-          </div>
-          <div>
-            <strong>4</strong>
-            <span>משחקים</span>
-          </div>
-          <div>
-            <strong>100%</strong>
-            <span>שבת נעימה</span>
-          </div>
+        <div class="text-lg font-bold text-cyan-400">versus</div>
+        <div class="flex items-center space-x-4 space-x-reverse">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="ברצלונה לוגו" class="w-16 h-16 glow-logo" />
+          <span class="text-xl font-semibold hover:text-cyan-400 transition">ברצלונה</span>
         </div>
-      </div>
+        <div class="text-lg text-slate-300">08.12.2026 | 21:00</div>
+      </li>
 
-      <div class="hero-visual">
-        <div class="floating-card match-card-preview">
-          <div class="match-topline">
-            <span>המשחק הבא</span>
-            <span class="live-dot"></span>
-          </div>
-
-          <div class="teams-row">
-            <div class="team">
-              <span class="team-badge blue">MC</span>
-              <strong>מנצ'סטר סיטי</strong>
-            </div>
-            <span class="vs">VS</span>
-            <div class="team">
-              <span class="team-badge red">B</span>
-              <strong>ברצלונה</strong>
-            </div>
-          </div>
-
-          <div class="match-date">07 בדצמבר 2026 · 21:00</div>
+      <li class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 bg-slate-900 p-4 rounded-xl shadow-md hover:shadow-orange-400 transition">
+        <div class="flex items-center space-x-4 space-x-reverse">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/Real_Madrid_CF.svg" alt="ריאל מדריד לוגו" class="w-16 h-16 glow-logo" />
+          <span class="text-xl font-semibold hover:text-orange-400 transition">ריאל מדריד</span>
         </div>
-
-        <div class="stadium-ball">⚽</div>
-        <div class="tag tag-one">✦ מסלול פרימיום</div>
-        <div class="tag tag-two">🕯️ שבת בראש שקט</div>
-      </div>
-    </section>
-  </header>
-
-  <main class="container">
-    <section id="matches" class="section">
-      <div class="section-heading">
-        <div>
-          <div class="eyebrow">תכנון חכם</div>
-          <h2>לוח המשחקים</h2>
+        <div class="text-lg font-bold text-orange-400">versus</div>
+        <div class="flex items-center space-x-4 space-x-reverse">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/f4/CA_Osasuna_logo.svg" alt="אוסאסונה לוגו" class="w-16 h-16 glow-logo" />
+          <span class="text-xl font-semibold hover:text-orange-400 transition">אוסאסונה</span>
         </div>
+        <div class="text-lg text-slate-300">13.12.2026 | שעה טרם נקבעה</div>
+      </li>
 
-        <div class="filters">
-          <button class="filter-btn active" data-filter="all">הכול</button>
-          <button class="filter-btn" data-filter="weekday">ימי חול</button>
-          <button class="filter-btn" data-filter="shabbat">שבת</button>
+      <li class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 bg-slate-900 p-4 rounded-xl shadow-md hover:shadow-orange-400 transition">
+        <div class="flex items-center space-x-4 space-x-reverse">
+          <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Valencia_CF_logo.svg" alt="ולנסיה לוגו" class="w-16 h-16 glow-logo" />
+          <span class="text-xl font-semibold hover:text-orange-400 transition">ולנסיה</span>
         </div>
-      </div>
-
-      <div class="countdown-card">
-        <div>
-          <span class="small-label">המשחק הראשון בעוד</span>
-          <strong id="countdown">טוען...</strong>
+        <div class="text-lg font-bold text-orange-400">versus</div>
+        <div class="flex items-center space-x-4 space-x-reverse">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Atletico_Madrid_2017_logo.svg" alt="אתלטיקו מדריד לוגו" class="w-16 h-16 glow-logo" />
+          <span class="text-xl font-semibold hover:text-orange-400 transition">אתלטיקו מדריד</span>
         </div>
-        <span class="countdown-icon">⏱️</span>
-      </div>
+        <div class="text-lg text-slate-300">14.12.2026 | 18:30</div>
+      </li>
+    </ul>
+  </section>
 
-      <div class="matches-grid">
-        <article class="match-tile" data-type="weekday">
-          <div class="tile-top">
-            <span class="date-badge">07 דצמ׳</span>
-            <span class="safe-badge">✓ לא בשבת</span>
-          </div>
-          <div class="teams-stack">
-            <div class="team-row">
-              <span class="club-icon blue">MC</span>
-              <b>מנצ'סטר סיטי</b>
-            </div>
-            <span class="time">21:00</span>
-            <div class="team-row">
-              <span class="club-icon red">B</span>
-              <b>ברצלונה</b>
-            </div>
-          </div>
-          <div class="tile-footer">
-            <span>יום שני</span>
-            <span>📍 ברצלונה</span>
-          </div>
-        </article>
-
-        <article class="match-tile" data-type="weekday">
-          <div class="tile-top">
-            <span class="date-badge">10 דצמ׳</span>
-            <span class="safe-badge">✓ לא בשבת</span>
-          </div>
-          <div class="teams-stack">
-            <div class="team-row">
-              <span class="club-icon red">O</span>
-              <b>אוסאסונה</b>
-            </div>
-            <span class="time">20:45</span>
-            <div class="team-row">
-              <span class="club-icon white">RM</span>
-              <b>ריאל מדריד</b>
-            </div>
-          </div>
-          <div class="tile-footer">
-            <span>יום חמישי</span>
-            <span>📍 מדריד</span>
-          </div>
-        </article>
-
-        <article class="match-tile shabbat-match" data-type="shabbat">
-          <div class="tile-top">
-            <span class="date-badge">12 דצמ׳</span>
-            <span class="shabbat-badge">⚠ שבת</span>
-          </div>
-          <div class="teams-stack">
-            <div class="team-row">
-              <span class="club-icon gold">⚽</span>
-              <b>משחק לדוגמה</b>
-            </div>
-            <span class="time">19:00</span>
-            <div class="team-row">
-              <span class="club-icon purple">★</span>
-              <b>קבוצה מקומית</b>
-            </div>
-          </div>
-          <div class="tile-footer">
-            <span>יום שבת</span>
-            <span>📍 מדריד</span>
-          </div>
-        </article>
-
-        <article class="match-tile" data-type="weekday">
-          <div class="tile-top">
-            <span class="date-badge">14 דצמ׳</span>
-            <span class="safe-badge">✓ לא בשבת</span>
-          </div>
-          <div class="teams-stack">
-            <div class="team-row">
-              <span class="club-icon orange">V</span>
-              <b>וולנסיה</b>
-            </div>
-            <span class="time">18:30</span>
-            <div class="team-row">
-              <span class="club-icon red">A</span>
-              <b>אתלטיקו מדריד</b>
-            </div>
-          </div>
-          <div class="tile-footer">
-            <span>יום שני</span>
-            <span>📍 מדריד</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="food" class="section">
-      <div class="section-heading">
-        <div>
-          <div class="eyebrow">טעמים מהעולם</div>
-          <h2>אוכל כשר במסלול</h2>
-        </div>
-        <span class="section-note">נבחר בקפידה במיוחד עבורך</span>
-      </div>
-
-      <div class="feature-grid">
-        <article class="feature-card madrid">
-          <div class="feature-icon">🍽️</div>
-          <span class="city-label">מדריד</span>
-          <h3>הכשר המודרני</h3>
-          <p>תפריט מגוון, חללים יפים ובשילוב של אוכל כשר איכותי במרכז העיר.</p>
-          <button class="text-btn" data-place="הכשר המודרני">פרטים נוספים ←</button>
-        </article>
-
-        <article class="feature-card barcelona">
-          <div class="feature-icon">🥘</div>
-          <span class="city-label">ברצלונה</span>
-          <h3>טעם קדושה</h3>
-          <p>מסעדה כשרה למהדרין עם אווירה ביתית, מנות נהדרות ונגיעות מזרח תיכוניות.</p>
-          <button class="text-btn" data-place="טעם קדושה">פרטים נוספים ←</button>
-        </article>
-      </div>
-    </section>
-
-    <section id="community" class="section">
-      <div class="section-heading">
-        <div>
-          <div class="eyebrow">מרגישים בבית</div>
-          <h2>קהילה, תפילה ושבת</h2>
-        </div>
-      </div>
-
-      <div class="community-grid">
-        <article class="community-card">
-          <span class="community-icon">🕍</span>
-          <div>
-            <h3>בית חב״ד מדריד</h3>
-            <p>רחוב קרלוס 8, מדריד</p>
-            <small>תפילות יומיות ואירוח תיירים</small>
-          </div>
-        </article>
-
-        <article class="community-card">
-          <span class="community-icon">✡️</span>
-          <div>
-            <h3>בית הכנסת הגדול</h3>
-            <p>רחוב דל מאר 15, ברצלונה</p>
-            <small>מרכז קהילתי פעיל ופתוח למבקרים</small>
-          </div>
-        </article>
-
-        <article class="community-card">
-          <span class="community-icon">🕯️</span>
-          <div>
-            <h3>בית חב״ד ברצלונה</h3>
-            <p>מרכז העיר</p>
-            <small>פעילויות וארוחות שבת באווירה חמה</small>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <div>
-        <div class="eyebrow">מתחילים לחלום</div>
-        <h2>מוכנים למסע של פעם בחיים?</h2>
-        <p>שמרו את המסלול, שתפו אותו עם חברים ותחוו את הכדורגל כמו שצריך.</p>
-      </div>
-      <button id="shareButton" class="primary-btn">שתף את המסלול ↗</button>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <span>© 2026 Football Journey</span>
-    <span>נבנה באהבה לחובבי כדורגל, טיולים ושבת</span>
-  </footer>
-
-  <div id="infoModal" class="modal" aria-hidden="true">
-    <div class="modal-content">
-      <button id="closeModal" class="close-btn" aria-label="סגור">×</button>
-      <div class="modal-icon">✦</div>
-      <h2>Football Journey 2026</h2>
-      <p>
-        כאן תוכלו להתרכז בכל פרטי הטיול, לברר על חב״ד, כשרות, משחקים
-        ואפשרויות אירוח — הכל במקום אחד, בצורה נעימה וקלילה.
-      </p>
-      <button id="modalAction" class="primary-btn">הבנתי</button>
+  <section aria-label="אצטדיונים ותמונות" class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+    <div class="rounded-xl overflow-hidden shadow-lg ring-4 ring-cyan-500 hover:ring-cyan-700 transition relative">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Estadio_Santiago_Bernabéu_External_2020.jpg" alt="אצטדיון סנטיאגו ברנבאו" class="w-full h-48 object-cover" />
+      <div class="absolute bottom-0 w-full bg-black/70 text-center p-2 text-lg font-semibold text-cyan-400">סנטיאגו ברנבאו - ריאל מדריד</div>
     </div>
-  </div>
+    <div class="rounded-xl overflow-hidden shadow-lg ring-4 ring-[#39FF14] hover:ring-green-600 transition relative">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Camp_Nou_2017_01.jpg" alt="אצטדיון קאמפ נואו" class="w-full h-48 object-cover" />
+      <div class="absolute bottom-0 w-full bg-black/70 text-center p-2 text-lg font-semibold text-[#39FF14]">אצטדיון קאמפ נואו - ברצלונה</div>
+    </div>
+    <div class="rounded-xl overflow-hidden shadow-lg ring-4 ring-orange-400 hover:ring-orange-600 transition relative">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Estadio_de_Mestalla_2022.jpg" alt="אצטדיון מסטאיה בוולנסיה" class="w-full h-48 object-cover" />
+      <div class="absolute bottom-0 w-full bg-black/70 text-center p-2 text-lg font-semibold text-orange-400">אצטדיון מסטאיה - ולנסיה</div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+</main>
+
+<footer class="text-center py-6 text-slate-400 select-none text-sm">
+  © 2026 Champions Tours | טלפון להזמנות: <a href="tel:+972502234922" class="hover:text-white underline">+972 50-223-4922</a>
+</footer>
+
 </body>
 </html>
