@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><rect width="240" height="240" rx="32" fill="#d71920"/><circle cx="120" cy="100" r="65" fill="#fff" stroke="#d71920" stroke-width="6"/><text x="120" y="112" text-anchor="middle" fill="#d71920" font-size="38" font-family="Arial" font-weight="700">ATM</text><text x="120" y="185" text-anchor="middle" fill="#fff" font-size="25" font-family="Arial" font-weight="700">ATLÉTICO</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Atletico Madrid logo">
+  <defs>
+    <linearGradient id="atm1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#e9f0f8"/>
+      <stop offset="100%" stop-color="#dfe8f3"/>
+    </linearGradient>
+  </defs>
+  <path d="M12 16c0-6 5-11 11-11h74c6 0 11 5 11 11v37c0 28-16 46-48 56C28 99 12 81 12 53V16z" fill="url(#atm1)" stroke="#1f2430" stroke-width="3"/>
+  <path d="M20 22h80v31c0 18-9 32-40 48C29 85 20 71 20 53V22z" fill="#ffffff"/>
+  <path d="M20 24h80v12H20z" fill="#d51e2d"/>
+  <path d="M20 36h80v18H20z" fill="#ffffff"/>
+  <path d="M20 54h80v8H20z" fill="#d51e2d"/>
+  <path d="M48 33h24v21H48z" fill="#d51e2d"/>
+  <path d="M39 35l21-12 21 12-21 13z" fill="#f5f5f5" opacity="0.9"/>
+  <text x="60" y="52" text-anchor="middle" font-size="12" font-weight="900" font-family="Arial, Helvetica, sans-serif" fill="#d51e2d">ATM</text>
+  <circle cx="60" cy="74" r="11" fill="#d51e2d"/>
+  <path d="M53 74h14v11H53z" fill="#ffffff"/>
+  <path d="M60 67v17" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <text x="60" y="102" text-anchor="middle" font-size="9" font-weight="800" font-family="Arial, Helvetica, sans-serif" fill="#1d2430" letter-spacing="1">MAD</text>
+</svg>

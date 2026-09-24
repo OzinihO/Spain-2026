@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><rect width="240" height="240" rx="32" fill="#d71920"/><circle cx="120" cy="100" r="65" fill="#fff" stroke="#10182b" stroke-width="6"/><text x="120" y="112" text-anchor="middle" fill="#d71920" font-size="42" font-family="Arial" font-weight="700">OSA</text><text x="120" y="185" text-anchor="middle" fill="#fff" font-size="25" font-family="Arial" font-weight="700">OSASUNA</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="CA Osasuna logo">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f8f8f8"/>
+      <stop offset="100%" stop-color="#eaeaea"/>
+    </linearGradient>
+  </defs>
+  <path d="M12 16c0-6 5-11 11-11h74c6 0 11 5 11 11v37c0 28-16 46-48 56C28 99 12 81 12 53V16z" fill="#f3f3f3" stroke="#1a1a1a" stroke-width="3"/>
+  <path d="M20 22h80v31c0 18-9 32-40 48C29 85 20 71 20 53V22z" fill="#ffffff"/>
+  <path d="M20 22h80v17H20z" fill="#d61f3b"/>
+  <path d="M20 39h80v14H20z" fill="#ffffff"/>
+  <path d="M38 26h44v18H38z" fill="#d61f3b"/>
+  <circle cx="60" cy="58" r="14" fill="#d61f3b"/>
+  <path d="M48 58h24v13H48z" fill="#ffffff"/>
+  <path d="M60 47v24" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M18 92h84" stroke="#d61f3b" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+  <text x="60" y="103" text-anchor="middle" font-size="10" font-weight="800" font-family="Arial, Helvetica, sans-serif" fill="#1b1b1b" letter-spacing="1">OSA</text>
+</svg>
