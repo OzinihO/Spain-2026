@@ -1,188 +1,295 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>טיול כדורגל ושמירת שבת</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f7fa;
-            color: #1a1a1a;
-            margin: 0;
-            padding: 0;
-            direction: rtl;
-        }
-        header {
-            background: linear-gradient(90deg, #003366, #006699);
-            color: white;
-            padding: 20px 10px;
-            text-align: center;
-            font-size: 1.8rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        main {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 0 10px 40px;
-        }
-        h2 {
-            color: #003366;
-            border-bottom: 3px solid #006699;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #006699;
-            color: white;
-        }
-        .yes-shabbat {
-            background-color: #ffe6e6;
-            color: #d90000;
-            font-weight: bold;
-        }
-        ul.locations {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-        }
-        ul.locations li {
-            background: white;
-            margin-bottom: 8px;
-            padding: 12px 15px;
-            border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        .city {
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-top: 20px;
-            color: #004080;
-        }
-        .gallery {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .gallery img {
-            width: 280px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-        footer {
-            text-align: center;
-            padding: 15px 10px;
-            background: #003366;
-            color: white;
-            font-size: 0.9rem;
-            margin-top: 40px;
-        }
-        @media (max-width: 600px) {
-            .gallery img {
-                width: 100%;
-            }
-            table, th, td {
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>טיול כדורגל ושמירת שבת – חלומי תלת-ממדי</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Alef', sans-serif;
+      background: linear-gradient(135deg, #051622 0%, #003a63 100%);
+      color: #f0f0f0;
+      direction: rtl;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #00bfff;
+      user-select: none;
+    }
+
+    main {
+      max-width: 960px;
+      margin: auto;
+      padding: 1rem 1rem 4rem;
+      perspective: 1500px;
+    }
+
+    .card {
+      background: rgba(4, 39, 70, 0.82);
+      margin-bottom: 2.5rem;
+      border-radius: 15px;
+      padding: 2rem 2rem 2rem 3rem;
+      box-shadow: 0 20px 30px rgba(0,191,255,0.3), inset 0 0 20px #0099ff77;
+      transform-style: preserve-3d;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: rotateY(8deg) rotateX(6deg) translateZ(15px);
+      box-shadow: 0 20px 40px rgba(0,205,255,0.5), inset 0 0 30px #00ccffcc;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      margin-bottom: 1.2rem;
+      color: #00bfff;
+      text-shadow: 0 0 8px #00b3ff99;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.1rem;
+      color: #ddf7ff;
+    }
+
+    th, td {
+      padding: 14px 12px;
+      border-bottom: 1px solid #0077bb55;
+      text-align: center;
+      user-select: text;
+    }
+
+    th {
+      background: #004060;
+      font-weight: 600;
+    }
+
+    .shabbat-yes {
+      background: #330000cc;
+      color: #ff6666;
+      font-weight: 700;
+      border-radius: 8px;
+    }
+
+    .locations-list {
+      list-style: none;
+      line-height: 1.6;
+    }
+
+    .locations-list li {
+      margin-bottom: 1rem;
+      background: #012b44aa;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #009dff88;
+      font-size: 1.1rem;
+    }
+
+    .evalong {
+      color: #00e9ff;
+      font-weight: 700;
+    }
+
+    .article {
+      background: #005b8a99;
+      margin-bottom: 1.8rem;
+      border-radius: 14px;
+      padding: 20px 25px;
+      font-size: 1.15rem;
+      line-height: 1.4;
+      box-shadow: 0 0 15px #008fd6bb;
+      transition: background 0.3s;
+    }
+
+    .article:hover {
+      background: #007fcccc;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #0066ff, #00ccff);
+      padding: 12px 28px;
+      margin-top: 1.5rem;
+      border: 0;
+      border-radius: 50px;
+      color: white;
+      font-weight: bold;
+      font-family: inherit;
+      font-size: 1rem;
+      text-shadow: 0 0 15px #00d4ffcc;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 6px 14px #00ccffbb;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 26px #00eeffdd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      background: #003366;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.9rem;
+        padding: 1.5rem 1rem;
+      }
+
+      .card {
+        padding: 1.5rem 1.5rem 1.5rem 2rem;
+      }
+
+      .article {
+        font-size: 1rem;
+        padding: 14px 16px;
+      }
+
+      .gallery img {
+        width: 100%;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        טיול הכדורגל והקודש - כל מה שצריך לדעת לשמירת שבת בכיף
-    </header>
-    <main>
-        <section>
-            <h2>לוח זמנים משחקים</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>תאריך</th>
-                        <th>יום בשבוע</th>
-                        <th>שעת המשחק</th>
-                        <th>מפגש</th>
-                        <th>נופל בשבת?</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>07/12/2026</td>
-                        <td>שני</td>
-                        <td>21:00</td>
-                        <td>מנצ'סטר סיטי - ברצלונה</td>
-                        <td>לא</td>
-                    </tr>
-                    <tr>
-                        <td>10/12/2026</td>
-                        <td>חמישי</td>
-                        <td>20:45</td>
-                        <td>אוסאסונה - ריאל מדריד</td>
-                        <td>לא</td>
-                    </tr>
-                    <tr class="yes-shabbat">
-                        <td>12/12/2026</td>
-                        <td>שבת</td>
-                        <td>19:00</td>
-                        <td>משחק לדוגמה בשבת</td>
-                        <td>כן</td>
-                    </tr>
-                    <tr>
-                        <td>14/12/2026</td>
-                        <td>שני</td>
-                        <td>18:30</td>
-                        <td>וולנסיה - אתלטיקו מדריד</td>
-                        <td>לא</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+  <header>טיול כדורגל ושמירת שבת – מידע מקיף וחוויתי</header>
 
-        <section>
-            <h2>מקומות כשרים ובתי חב"ד בערים</h2>
-            <ul class="locations">
-                <li>
-                    <span class="city">מדריד</span><br />
-                    מסעדת "הכשר המודרני" – רחוב אלונסו 12<br />
-                    בית חב"ד מדריד – רחוב קרלוס 8
-                </li>
-                <li>
-                    <span class="city">ברצלונה</span><br />
-                    מסעדת "טעם קדושה" – רחוב רמבלאס 42<br />
-                    בית הכנסת הגדול של ברצלונה – רחוב דל מאר 15
-                </li>
-            </ul>
-        </section>
+  <main>
+    <section class="card" aria-label="לוח משחקים">
+      <h2 class="section-title">לוח זמנים משחקים</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>תאריך</th>
+            <th>יום בשבוע</th>
+            <th>שעת המשחק</th>
+            <th>מפגש</th>
+            <th>נופל בשבת?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>07/12/2026</td>
+            <td>שני</td>
+            <td>21:00</td>
+            <td>מנצ'סטר סיטי - ברצלונה</td>
+            <td>לא</td>
+          </tr>
+          <tr>
+            <td>10/12/2026</td>
+            <td>חמישי</td>
+            <td>20:45</td>
+            <td>אוסאסונה - ריאל מדריד</td>
+            <td>לא</td>
+          </tr>
+          <tr class="shabbat-yes">
+            <td>12/12/2026</td>
+            <td>שבת</td>
+            <td>19:00</td>
+            <td>משחק לדוגמה בשבת</td>
+            <td>כן</td>
+          </tr>
+          <tr>
+            <td>14/12/2026</td>
+            <td>שני</td>
+            <td>18:30</td>
+            <td>וולנסיה - אתלטיקו מדריד</td>
+            <td>לא</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-        <section>
-            <h2>גלריית תמונות</h2>
-            <div class="gallery">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Estadio_Santiago_Bernabéu_External_2020.jpg" alt="אצטדיון סנטיאגו ברנבאו במדריד" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Camp_Nou_2017_01.jpg" alt="אצטדיון קאמפ נואו בברצלונה" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Kosher_food_hamburger.jpg" alt="המבורגר כשר" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Chabad_House_Entrance_NYC.jpg" alt="בית חב""ד" />
-            </div>
-        </section>
-    </main>
-    <footer>
-        © 2026 טיול כדורגל ושמירת שבת | בנוי בעזרת Chatbox AI
-    </footer>
+    <section class="card" aria-label="כתבות מסעדות כשרות">
+      <h2 class="section-title">מסעדות כשרות מומלצות במדריד וברצלונה</h2>
+      <article class="article" aria-label="כתבה על מסעדת הכשר המודרני במדריד">
+        <p><strong>מסעדת הכשר המודרני - מדריד</strong><br />
+          מסעדה עם תפריט מגוון הכולל מנות ראשונות, עיקריות וקינוחים, הכול כשר לפי הכשר רבנות. ממוקמת בלב מדריד, במקום נוח ונגיש.</p>
+      </article>
+      <article class="article" aria-label="כתבה על מסעדת טעם קדושה בברצלונה">
+        <p><strong>טעם קדושה - ברצלונה</strong><br />
+          מסעדה כשרה למהדרין הידועה באווירה ביתית וחמה. מומלץ במיוחד לנסות את המנות המקומיות עם נגיעות מזרח-תיכוניות.</p>
+      </article>
+    </section>
+
+    <section class="card" aria-label="בתי חב״ד ובתי כנסת">
+      <h2 class="section-title">בתי חב״ד ובתי כנסת במדריד וברצלונה</h2>
+      <ul class="locations-list">
+        <li>
+          <span class="evalong">בית חב״ד מדריד</span> – רחוב קרלוס 8, מדריד<br />
+          מקיימים תפילות יומיומיות ושירותי אירוח תיירים.
+        </li>
+        <li>
+          <span class="evalong">בית הכנסת הגדול של ברצלונה</span> – רחוב דל מאר 15, ברצלונה<br />
+          מרכז קהילה פעיל וקהילתי, פתוח גם למבקרים.
+        </li>
+        <li>
+          <span class="evalong">בית חב״ד ברצלונה</span> – פעילויות וארוחות שבת באמצע העיר.
+        </li>
+      </ul>
+    </section>
+
+    <section class="card" aria-label="גלריית תמונות">
+      <h2 class="section-title">גלריית תמונות</h2>
+      <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Estadio_Santiago_Bernabéu_External_2020.jpg" alt="אצטדיון סנטיאגו ברנבאו במדריד" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Camp_Nou_2017_01.jpg" alt="אצטדיון קאמפ נואו בברצלונה" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Kosher_food_hamburger.jpg" alt="המבורגר כשר" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Chabad_House_Entrance_NYC.jpg" alt="בית חב״ד" />
+      </div>
+    </section>
+
+    <div style="text-align:center;">
+      <button class="btn" onclick="alert('עוד מידע יתווסף בקרוב!');" aria-label="קבל עוד מידע">קבל מידע נוסף</button>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 טיול כדורגל ושמירת שבת | בנוי בעזרת Chatbox AI
+  </footer>
 </body>
 </html>
