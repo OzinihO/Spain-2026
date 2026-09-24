@@ -3,92 +3,211 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>טריפל ספרדי - חבילת הכדורגל</title>
+<title>טריפל ספרדי וטיול כדורגל | שמירת שבת ומידע כשרות</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   .glow-logo {
-    filter: drop-shadow(0 0 4px #00f0ff);
+    filter: drop-shadow(0 0 4px rgba(57, 255, 20, 0.9));
     transition: filter 0.3s ease;
   }
   .glow-logo:hover {
-    filter: drop-shadow(0 0 8px #00f0ff);
+    filter: drop-shadow(0 0 10px rgba(57, 255, 20, 1));
+  }
+  .card {
+    transition: transform 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,255,100,0.4);
   }
 </style>
 </head>
-<body class="bg-slate-900 text-white font-sans">
+<body class="bg-slate-900 text-slate-100 font-sans">
 
-<header class="text-center py-10 px-5 max-w-5xl mx-auto">
-  <h1 class="text-4xl font-extrabold mb-3">טריפל ספרדי - חבילת טיול כדורגל</h1>
-  <p class="text-lg text-slate-300 mb-6">7–14.12.2026, כל השלושה - מנצ'סטר סיטי, ברצלונה, ריאל מדריד, אתלטיקו מדריד ועוד!</p>
+<header class="py-14 px-6 text-center max-w-6xl mx-auto select-none">
+  <h1 class="text-5xl md:text-6xl font-extrabold text-cyan-400 leading-tight">טריפל ספרדי וטיול כדורגל</h1>
+  <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-6">
+    07-14 בדצמבר 2026 | 3 משחקים גדולים במדריד וברצלונה + מידע שמירת שבת וכשרות
+  </p>
+
+  <div id="countdown" class="text-4xl font-mono bg-slate-800 inline-block rounded-lg px-8 py-4 text-[#39FF14] tracking-widest" aria-live="polite">00d 00h 00m 00s</div>
+
+  <button
+    class="mt-8 bg-[#39FF14] text-slate-900 font-semibold py-3 px-10 rounded-full shadow-lg hover:bg-[#2CC403] active:scale-95 transition"
+    aria-label="הרשמה לטריפל הספרדי"
+  >
+    אני בפנים!
+  </button>
 </header>
 
-<main class="max-w-5xl mx-auto px-4 space-y-12">
+<main class="max-w-6xl mx-auto px-6 space-y-20">
 
-  <section aria-label="לוח משחקים ראשי" class="bg-slate-800 p-6 rounded-xl shadow-lg">
-    <h2 class="text-2xl font-bold mb-6" style="color:#39FF14;">לוח משחקים</h2>
+  <section aria-label="משחקים לפי עיר" class="space-y-12 max-w-5xl mx-auto">
+
+    <h2 class="text-3xl font-bold text-center text-[#39FF14] mb-10">משחקים בברצלונה</h2>
     <ul class="space-y-8">
-
-      <li class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 bg-slate-900 p-4 rounded-xl shadow-md hover:shadow-cyan-500 transition">
-        <div class="flex items-center space-x-4 space-x-reverse">
-          <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg" alt="מנצ'סטר סיטי לוגו" class="w-16 h-16 glow-logo" />
-          <span class="text-xl font-semibold hover:text-cyan-400 transition">מנצ'סטר סיטי</span>
-        </div>
-        <div class="text-lg font-bold text-cyan-400">versus</div>
-        <div class="flex items-center space-x-4 space-x-reverse">
-          <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="ברצלונה לוגו" class="w-16 h-16 glow-logo" />
+      <li class="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-slate-900 p-5 rounded-2xl hover:shadow-cyan-600 card">
+        <div class="flex items-center space-x-4 space-x-reverse mb-3 sm:mb-0">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="לוגו ברצלונה" class="w-16 h-16 glow-logo" />
           <span class="text-xl font-semibold hover:text-cyan-400 transition">ברצלונה</span>
         </div>
-        <div class="text-lg text-slate-300">08.12.2026 | 21:00</div>
+        <div class="text-lg font-bold text-cyan-400 mb-3 sm:mb-0">⚔️ מול</div>
+        <div class="flex items-center space-x-4 space-x-reverse mb-3 sm:mb-0">
+          <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg" alt="לוגו מנצ'סטר סיטי" class="w-16 h-16 glow-logo" />
+          <span class="text-xl font-semibold hover:text-cyan-400 transition">מנצ'סטר סיטי</span>
+        </div>
+        <div class="text-slate-400 font-mono text-sm sm:text-base whitespace-nowrap">08.12.2026 | 21:00</div>
       </li>
+    </ul>
 
-      <li class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 bg-slate-900 p-4 rounded-xl shadow-md hover:shadow-orange-400 transition">
-        <div class="flex items-center space-x-4 space-x-reverse">
-          <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/Real_Madrid_CF.svg" alt="ריאל מדריד לוגו" class="w-16 h-16 glow-logo" />
+    <h2 class="text-3xl font-bold text-center text-[#39FF14] mt-14 mb-10">משחקים במדריד</h2>
+    <ul class="space-y-8">
+      <li class="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-slate-900 p-5 rounded-2xl hover:shadow-orange-500 card">
+        <div class="flex items-center space-x-4 space-x-reverse mb-3 sm:mb-0">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/f2/Real_Madrid_CF.svg" alt="לוגו ריאל מדריד" class="w-16 h-16 glow-logo" />
           <span class="text-xl font-semibold hover:text-orange-400 transition">ריאל מדריד</span>
         </div>
-        <div class="text-lg font-bold text-orange-400">versus</div>
-        <div class="flex items-center space-x-4 space-x-reverse">
-          <img src="https://upload.wikimedia.org/wikipedia/en/f/f4/CA_Osasuna_logo.svg" alt="אוסאסונה לוגו" class="w-16 h-16 glow-logo" />
+        <div class="text-lg font-bold text-orange-400 mb-3 sm:mb-0">⚔️ מול</div>
+        <div class="flex items-center space-x-4 space-x-reverse mb-3 sm:mb-0">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/f4/CA_Osasuna_logo.svg" alt="לוגו אוסאסונה" class="w-16 h-16 glow-logo" />
           <span class="text-xl font-semibold hover:text-orange-400 transition">אוסאסונה</span>
         </div>
-        <div class="text-lg text-slate-300">13.12.2026 | שעה טרם נקבעה</div>
+        <div class="text-slate-400 font-mono text-sm sm:text-base whitespace-nowrap">13.12.2026 | שעה טרם נקבעה</div>
       </li>
 
-      <li class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 bg-slate-900 p-4 rounded-xl shadow-md hover:shadow-orange-400 transition">
-        <div class="flex items-center space-x-4 space-x-reverse">
-          <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Valencia_CF_logo.svg" alt="ולנסיה לוגו" class="w-16 h-16 glow-logo" />
-          <span class="text-xl font-semibold hover:text-orange-400 transition">ולנסיה</span>
-        </div>
-        <div class="text-lg font-bold text-orange-400">versus</div>
-        <div class="flex items-center space-x-4 space-x-reverse">
-          <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Atletico_Madrid_2017_logo.svg" alt="אתלטיקו מדריד לוגו" class="w-16 h-16 glow-logo" />
+      <li class="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-slate-900 p-5 rounded-2xl hover:shadow-orange-500 card">
+        <div class="flex items-center space-x-4 space-x-reverse mb-3 sm:mb-0">
+          <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Atletico_Madrid_2017_logo.svg" alt="לוגו אתלטיקו מדריד" class="w-16 h-16 glow-logo" />
           <span class="text-xl font-semibold hover:text-orange-400 transition">אתלטיקו מדריד</span>
         </div>
-        <div class="text-lg text-slate-300">14.12.2026 | 18:30</div>
+        <div class="text-lg font-bold text-orange-400 mb-3 sm:mb-0">⚔️ מול</div>
+        <div class="flex items-center space-x-4 space-x-reverse mb-3 sm:mb-0">
+          <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Valencia_CF_logo.svg" alt="לוגו ולנסיה" class="w-16 h-16 glow-logo" />
+          <span class="text-xl font-semibold hover:text-orange-400 transition">ולנסיה</span>
+        </div>
+        <div class="text-slate-400 font-mono text-sm sm:text-base whitespace-nowrap">14.12.2026 | 18:30</div>
       </li>
     </ul>
   </section>
 
-  <section aria-label="אצטדיונים ותמונות" class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-    <div class="rounded-xl overflow-hidden shadow-lg ring-4 ring-cyan-500 hover:ring-cyan-700 transition relative">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Estadio_Santiago_Bernabéu_External_2020.jpg" alt="אצטדיון סנטיאגו ברנבאו" class="w-full h-48 object-cover" />
-      <div class="absolute bottom-0 w-full bg-black/70 text-center p-2 text-lg font-semibold text-cyan-400">סנטיאגו ברנבאו - ריאל מדריד</div>
+  <section aria-label="אצטדיונים" class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
+    <div class="relative rounded-xl overflow-hidden ring-4 ring-cyan-500 hover:ring-cyan-700 shadow-lg transition cursor-pointer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Camp_Nou_2017_01.jpg" alt="אצטדיון קאמפ נואו" class="w-full h-44 object-cover" />
+      <div class="absolute bottom-0 bg-black/70 text-cyan-400 p-2 text-center font-semibold text-lg select-none">קאמפ נואו - ברצלונה</div>
     </div>
-    <div class="rounded-xl overflow-hidden shadow-lg ring-4 ring-[#39FF14] hover:ring-green-600 transition relative">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Camp_Nou_2017_01.jpg" alt="אצטדיון קאמפ נואו" class="w-full h-48 object-cover" />
-      <div class="absolute bottom-0 w-full bg-black/70 text-center p-2 text-lg font-semibold text-[#39FF14]">אצטדיון קאמפ נואו - ברצלונה</div>
+    <div class="relative rounded-xl overflow-hidden ring-4 ring-cyan-500 hover:ring-cyan-700 shadow-lg transition cursor-pointer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Estadio_Santiago_Bernabéu_External_2020.jpg" alt="אצטדיון סנטיאגו ברנבאו" class="w-full h-44 object-cover" />
+      <div class="absolute bottom-0 bg-black/70 text-cyan-400 p-2 text-center font-semibold text-lg select-none">סנטיאגו ברנבאו - מדריד</div>
     </div>
-    <div class="rounded-xl overflow-hidden shadow-lg ring-4 ring-orange-400 hover:ring-orange-600 transition relative">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Estadio_de_Mestalla_2022.jpg" alt="אצטדיון מסטאיה בוולנסיה" class="w-full h-48 object-cover" />
-      <div class="absolute bottom-0 w-full bg-black/70 text-center p-2 text-lg font-semibold text-orange-400">אצטדיון מסטאיה - ולנסיה</div>
+    <div class="relative rounded-xl overflow-hidden ring-4 ring-orange-400 hover:ring-orange-600 shadow-lg transition cursor-pointer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Estadio_de_Mestalla_2022.jpg" alt="אצטדיון מסטאיה" class="w-full h-44 object-cover" />
+      <div class="absolute bottom-0 bg-black/70 text-orange-400 p-2 text-center font-semibold text-lg select-none">מסטאיה - ולנסיה</div>
     </div>
+  </section>
+
+  <section aria-labelledby="activities-heading" class="max-w-4xl mx-auto relative pl-12 sm:pl-20 border-r-4 border-slate-700">
+    <h2 id="activities-heading" class="text-3xl font-bold mb-10 text-center text-orange-400">טיול ושמירת שבת - פעילויות</h2>
+
+    <div class="space-y-12 relative">
+      <div class="absolute border-r-4 border-slate-700 top-0 bottom-0 right-10 hidden sm:block"></div>
+
+      <article class="relative">
+        <div class="absolute right-4 top-0 h-10 w-10 rounded-full bg-[#39FF14] ring-4 ring-slate-900 shadow-lg flex justify-center items-center text-slate-900">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l9 21H3L12 2z" /></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">טיולים רגליים (Hiking)</h3>
+        <p class="text-slate-300 max-w-xl">הליכה בטבע, הנופים היפים והמרהיבים של האזור.</p>
+      </article>
+
+      <article class="relative">
+        <div class="absolute right-4 top-0 h-10 w-10 rounded-full bg-cyan-400 ring-4 ring-slate-900 shadow-lg flex justify-center items-center text-slate-900">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l-4-4m0 0l4-4m-4 4h12" /></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">קייאקים (Kayaking)</h3>
+        <p class="text-slate-300 max-w-xl">שייט ושלווה במים, חוויות ספורטיביות במים.</p>
+      </article>
+
+      <article class="relative">
+        <div class="absolute right-4 top-0 h-10 w-10 rounded-full bg-orange-400 ring-4 ring-slate-900 shadow-lg flex justify-center items-center text-slate-900">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">אופני הרים (Mountain Biking)</h3>
+        <p class="text-slate-300 max-w-xl">ראווה של אדרנלין, מסלולי אופניים מאתגרים.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="packing-heading" class="max-w-6xl mx-auto space-y-10 px-4">
+    <h2 id="packing-heading" class="text-3xl font-bold text-[#39FF14] mb-6 text-center">רשימת אריזה</h2>
+    <form action="#" class="grid grid-cols-1 sm:grid-cols-3 gap-8 select-none max-w-5xl mx-auto">
+
+      <fieldset class="bg-slate-800 rounded-xl p-6 ring-2 ring-cyan-400 shadow-lg">
+        <legend class="text-xl font-semibold text-cyan-400 mb-4">ציוד (Gear)</legend>
+        <label class="flex items-center mb-3 cursor-pointer hover:text-[#39FF14] transition"><input type="checkbox" class="mr-3 w-5 h-5 accent-[#39FF14]" />נעלי הליכה</label>
+        <label class="flex items-center mb-3 cursor-pointer hover:text-[#39FF14] transition"><input type="checkbox" class="mr-3 w-5 h-5 accent-[#39FF14]" />תיק גב</label>
+        <label class="flex items-center mb-3 cursor-pointer hover:text-[#39FF14] transition"><input type="checkbox" class="mr-3 w-5 h-5 accent-[#39FF14]" />בקבוק מים</label>
+        <label class="flex items-center cursor-pointer hover:text-[#39FF14] transition"><input type="checkbox" class="mr-3 w-5 h-5 accent-[#39FF14]" />קסדה לאופניים</label>
+      </fieldset>
+
+      <fieldset class="bg-slate-800 rounded-xl p-6 ring-2 ring-orange-400 shadow-lg">
+        <legend class="text-xl font-semibold text-orange-400 mb-4">ביגוד (Clothes)</legend>
+        <label class="flex items-center mb-3 cursor-pointer hover:text-orange-400 transition"><input type="checkbox" class="mr-3 w-5 h-5 accent-orange-400" />חולצות מהירות ייבוש</label>
+        <label class="flex items-center mb-3 cursor-pointer hover:text-orange-400 transition"><input type="checkbox" class="mr-3 w-5 h-5 accent-orange-400" />מכנסי הליכה</label>
+        <label class="flex items-center mb-3 cursor-pointer hover:text-orange-400 transition"><input type="checkbox" class="mr-3 w-5 h-5 accent-orange-400" />מעיל קשיח</label>
+        <label class="flex items-center cursor-pointer hover:text-orange-400 transition"><input type="checkbox" class="mr-3 w-5 h-5 accent-orange-400" />גרביים ספורטיביים</label>
+      </fieldset>
+
+      <fieldset class="bg-slate-800 rounded-xl p-6 ring-2 ring-[#39FF14] shadow-lg">
+        <legend class="text-xl font-semibold text-[#39FF14] mb-4">אוכל (Food)</legend>
+        <label class="flex items-center mb-3 cursor-pointer hover:text-[#39FF14] transition"><input type="checkbox" class="mr-3 w-5 h-5 accent-[#39FF14]" />חטיפי אנרגיה</label>
+        <label class="flex items-center mb-3 cursor-pointer hover:text-[#39FF14] transition"><input type="checkbox" class="mr-3 w-5 h-5 accent-[#39FF14]" />תערובת גרעינים</label>
+        <label class="flex items-center mb-3 cursor-pointer hover:text-[#39FF14] transition"><input type="checkbox" class="mr-3 w-5 h-5 accent-[#39FF14]" />שתייה עם אלקטרוליטים</label>
+        <label class="flex items-center cursor-pointer hover:text-[#39FF14] transition"><input type="checkbox" class="mr-3 w-5 h-5 accent-[#39FF14]" />ארוחת צהריים ארוזה</label>
+      </fieldset>
+
+    </form>
+  </section>
+
+  <section aria-label="מפת טיול" class="max-w-5xl mx-auto rounded-xl overflow-hidden shadow-xl ring-4 ring-cyan-500 relative">
+    <h2 class="text-3xl font-bold text-center text-cyan-400 tracking-wide mb-6 pt-6 select-none">מפת המסלול</h2>
+    <div class="aspect-[16/9] w-full bg-gradient-to-tr from-slate-700 to-slate-800 flex items-center justify-center text-slate-400 select-none font-mono text-lg sm:text-xl">
+      מפת גוגל Placeholder
+    </div>
+  </section>
+
+  <section aria-label="מידע כשרות ובתי חב"ד" class="max-w-5xl mx-auto space-y-8 px-4 select-text">
+    <h2 class="text-3xl font-bold text-[#39FF14] text-center mb-6">מידע כשרות ובתי חב"ד</h2>
+    <ul class="space-y-5 text-lg text-slate-300 max-w-xl mx-auto">
+      <li><strong>מדריד:</strong> מסעדת "הכשר המודרני" ברחוב אלונסו 12, <br />בית חב"ד ברחוב קרלוס 8, כשרות רבנות.</li>
+      <li><strong>ברצלונה:</strong> מסעדת "טעם קדושה" ברחוב רמבלאס 42, <br />בית הכנסת הגדול ברחוב דל מאר 15, בית חב"ד פעיל באמצע העיר.</li>
+    </ul>
   </section>
 
 </main>
 
-<footer class="text-center py-6 text-slate-400 select-none text-sm">
-  © 2026 Champions Tours | טלפון להזמנות: <a href="tel:+972502234922" class="hover:text-white underline">+972 50-223-4922</a>
+<footer class="text-center py-8 text-slate-400 select-none text-sm max-w-6xl mx-auto">
+  © 2026 Champions Tours | להזמנות בטלפון: <a href="tel:+972502234922" class="hover:text-white underline">+972 50-223-4922</a>
 </footer>
+
+<script>
+  const countdownEl = document.getElementById('countdown');
+  const tripStart = new Date('2026-12-07T10:00:00');
+  function updateCountdown() {
+    const now = new Date();
+    const diff = tripStart - now;
+    if (diff <= 0) {
+      countdownEl.textContent = 'הטיול התחיל!';
+      return;
+    }
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const m = Math.floor((diff / (1000 * 60)) % 60);
+    const s = Math.floor((diff / 1000) % 60);
+    countdownEl.textContent = `${d}d ${h.toString().padStart(2,'0')}h ${m.toString().padStart(2,'0')}m ${s.toString().padStart(2,'0')}s`;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>
