@@ -1,83 +1,426 @@
 <!doctype html>
-<html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10182b">
-  <meta name="description" content="מדריך הטיול לספרד 2026 — כדורגל, מסעדות כשרות, בתי כנסת, חב״ד ואצטדיונים.">
-  <title>ספרד 2026 | מדריך הטיול שלנו</title>
-  <style>
-    :root{--navy:#10182b;--navy2:#1b2b4d;--gold:#f3d36b;--ink:#18202f;--muted:#69758b;--line:#e7ebf2;--bg:#f4f7fb;--white:#fff;--shadow:0 18px 45px #14213d14}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65}a{color:inherit}
-    .hero{color:#fff;background:radial-gradient(circle at 15% 5%,#304a7e 0,#1b2b4d 34%,#10182b 78%);padding:30px 22px 190px}.topbar,.hero-inner,.container{max-width:1120px;margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:800;font-size:1.1rem}.flag{font-size:1.5rem}.share{border:0;border-radius:12px;padding:11px 16px;background:var(--gold);color:#2b210c;font-weight:800;cursor:pointer}.hero-inner{padding-top:48px;text-align:right}.eyebrow{color:var(--gold);font-size:clamp(1.35rem,3vw,2.1rem);font-weight:800}.hero h1{font-size:clamp(2.8rem,7vw,5.7rem);line-height:1.05;margin:18px 0 25px;letter-spacing:-.04em}.hero p{font-size:clamp(1.1rem,2.5vw,1.65rem);max-width:900px;color:#e1e7f3;margin-right:0}
-    .container{padding:0 22px 70px;margin-top:-120px;position:relative}.quick{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}.quick a{min-height:150px;background:#fff;border-radius:28px;padding:24px 28px;text-decoration:none;box-shadow:var(--shadow);font-size:1.35rem;font-weight:800;display:flex;align-items:flex-end;justify-content:flex-start;position:relative}.quick span{position:absolute;top:25px;right:27px;font-size:2.5rem;filter:saturate(.65)}
-    .section{margin:62px 0}.section-head{margin-bottom:24px}.section h2{font-size:clamp(2rem,4vw,3rem);margin:0;color:var(--navy)}.section-intro{color:var(--muted);font-size:1.08rem;margin:4px 0}.cards,.matches{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card,.match,.day,.notice,.check{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow)}
-    .match{min-height:280px;text-align:center}.match h3{margin:14px 0 5px;font-size:1.25rem}.date{color:var(--muted)}.badge{display:inline-block;border-radius:99px;background:#e6f6ef;color:#086b4f;padding:4px 12px;font-size:.82rem;font-weight:800}.warn{background:#fff4d9;color:#8c6300}.danger{background:#fde9e9;color:#9b2f2f}
-    .teams{direction:ltr;display:flex;align-items:center;justify-content:center;gap:22px;margin:4px auto 14px}.team{width:100px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:.8rem;font-weight:800}
-    .badge-wrap{width:84px;height:84px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:0 6px 16px #14213d12;display:flex;align-items:center;justify-content:center;padding:12px}
-    .team-logo{width:100%;height:100%;object-fit:contain;display:block}.versus{font-weight:900;color:var(--gold);font-size:1.25rem}.notice{border-right:6px solid var(--gold);margin-top:18px}.card h3{margin:12px 0 5px;font-size:1.3rem}.card p{color:var(--muted);margin:7px 0}.card img.photo{width:100%;height:170px;object-fit:cover;border-radius:16px;background:#e7ebf2}.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}.links a{color:#1457a6;font-weight:800;text-decoration:none}.stadium-photo{height:190px!important}.address{font-weight:800!important;color:var(--ink)!important}.days{display:grid;gap:12px}.day{display:grid;grid-template-columns:100px 130px 1fr;align-items:center}.city{color:#168b68;font-weight:800}.source{font-size:.8rem;color:var(--muted);margin-top:14px}.source a{text-decoration:underline}.checklist{display:grid;gap:12px}.check{display:flex;gap:12px;align-items:center}.check.done{opacity:.55;text-decoration:line-through}.footer{text-align:center;padding:38px 20px;background:var(--navy);color:#cbd4e5}.small{font-size:.85rem;color:#9ba8c1}
-    .photo-credit{font-size:.72rem;color:var(--muted);margin-top:6px}
-    @media(max-width:850px){.quick{grid-template-columns:repeat(2,1fr)}.cards,.matches{grid-template-columns:repeat(2,1fr)}.day{grid-template-columns:80px 100px 1fr}}@media(max-width:560px){.hero{padding-bottom:160px}.topbar{align-items:flex-start}.quick,.cards,.matches{grid-template-columns:1fr}.quick a{min-height:110px}.container{padding:0 14px 50px}.day{grid-template-columns:1fr;gap:0}.team{width:88px}.badge-wrap{width:72px;height:72px;padding:10px}}
-  </style>
-</head>
-<body>
-  <header class="hero" id="top"><nav class="topbar"><div class="brand"><span class="flag">🇪🇸</span> Spain 2026</div><button class="share" id="share">↗ שתפו את המדריך</button></nav><div class="hero-inner"><div class="eyebrow">הטיול שלנו · ברצלונה + מדריד</div><h1>כדורגל, חברים<br>וזיכרונות בספרד</h1><p>מדריך אחד עם משחקים, אצטדיונים, מסעדות כשרות, כתובות של בתי כנסת וחב״ד, וקישורים רשמיים לבדיקה לפני הנסיעה.</p></div></header>
-  <main class="container">
-    <div class="quick"><a href="#matches"><span>⚽</span>משחקים</a><a href="#stadiums"><span>🏟️</span>אצטדיונים</a><a href="#schedule"><span>🗓️</span>לו״ז</a><a href="#kosher"><span>🍽️</span>כשרות</a><a href="#synagogues"><span>🕍</span>בתי כנסת וחב״ד</a></div>
-    <section class="section" id="matches"><div class="section-head"><h2>המשחקים שבדרך</h2><p class="section-intro">סמלי הקבוצות מוצגים כעת בתוך מסגרת עגולה אחידה, כדי שכולם ייראו באותו גודל וברמת דיוק זהה — בלי קשר לגודל המקורי של כל לוגו.</p></div><div class="matches">
-      <article class="match"><div class="teams"><div class="team"><span class="badge-wrap"><img class="team-logo" src="images/Barcelona.png" alt="לוגו ברצלונה"></span><span>ברצלונה</span></div><span class="versus">⚔</span><div class="team"><span class="badge-wrap"><img class="team-logo" src="images/City.png" alt="לוגו מנצ׳סטר סיטי"></span><span>מנצ׳סטר סיטי</span></div></div><span class="badge">מאומת לפי התכנון</span><h3>ברצלונה ⚔ מנצ׳סטר סיטי</h3><div class="date">📅 08.12.2026 · ⏰ 21:00</div><a class="links" href="https://www.fcbarcelona.com/en/football/first-team/schedule" target="_blank" rel="noopener">לוח משחקים רשמי ↗</a></article>
-      <article class="match"><div class="teams"><div class="team"><span class="badge-wrap"><img class="team-logo" src="images/RealMadrid.png" alt="לוגו ריאל מדריד"></span><span>ריאל מדריד</span></div><span class="versus">⚔</span><div class="team"><span class="badge-wrap"><img class="team-logo" src="images/Osasuna.png" alt="לוגו אוסאסונה"></span><span>אוסאסונה</span></div></div><span class="badge warn">שעה טרם נקבעה</span><h3>ריאל מדריד ⚔ אוסאסונה</h3><div class="date">📅 13.12.2026</div><a class="links" href="https://www.realmadrid.com/en/football/games" target="_blank" rel="noopener">לוח משחקים רשמי ↗</a></article>
-      <article class="match"><div class="teams"><div class="team"><span class="badge-wrap"><img class="team-logo" src="images/Atletico.png" alt="לוגו אתלטיקו מדריד"></span><span>אתלטיקו</span></div><span class="versus">⚔</span><div class="team"><span class="badge-wrap"><img class="team-logo" src="images/Valencia.png" alt="לוגו ולנסיה"></span><span>ולנסיה</span></div></div><span class="badge danger">לבדוק תאריך ושעה</span><h3>אתלטיקו מדריד ⚔ ולנסיה</h3><div class="date">📅 12–13.12.2026</div><a class="links" href="https://en.atleticodemadrid.com/first-team/fixtures" target="_blank" rel="noopener">לוח משחקים רשמי ↗</a></article>
-    </div><div class="notice"><strong>⚠️ חשוב:</strong> יש לאמת את התאריך, השעה, האצטדיון והכרטיסים מול האתר הרשמי או לה־ליגה.</div></section>
+<html lang="he" dir="rtl">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="theme-color" content="#0a0f1d">  
+  <meta name="description" content="מדריך הטיול לספרד 2026 — כדורגל, מסעדות כשרות, בתי כנסת, חב״ד ואצטדיונים.">  
+  <title>ספרד 2026 | מדריך הטיול שלנו</title>  
+  
+  <!-- פונט מודרני ויוקרתי -->
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+  
+  <style>  
+    :root {
+      --navy-dark: #0a0f1d;
+      --navy-main: #141b2d;
+      --navy-light: #1c253d;
+      --gold: #d4af37;
+      --gold-light: #f1d592;
+      --ink: #1e293b;
+      --muted: #64748b;
+      --line: rgba(255, 255, 255, 0.08);
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --glass: rgba(255, 255, 255, 0.7);
+    }  
 
-    <section class="section" id="stadiums"><div class="section-head"><h2>האצטדיונים</h2><p class="section-intro">הארמונות של הכדורגל הספרדי.</p></div><div class="cards">
-      <article class="card">
-        <img src="images/CampNou.jpg" class="photo stadium-photo" alt="Camp Nou">
-        <h3>ספוטיפיי קאמפ נואו</h3>
-        <p class="address">Barcelona, Spain</p>
-        <p>הבית של ברצלונה. אחד האצטדיונים הגדולים והמפורסמים בעולם.</p>
-        <div class="links"><a href="https://www.fcbarcelona.com/en/visit-barcelona/camp-nou" target="_blank">ביקור רשמי ↗</a></div>
-      </article>
-      <article class="card">
-        <img src="images/Bernabeu.jpg" class="photo stadium-photo" alt="Santiago Bernabéu">
-        <h3>סנטיאגו ברנבאו</h3>
-        <p class="address">Madrid, Spain</p>
-        <p>הבית של ריאל מדריד. מקדש של כדורגל עם שדרוג מודרני מדהים.</p>
-        <div class="links"><a href="https://www.realmadrid.com/en/tour-bernabeu" target="_blank">ביקור רשמי ↗</a></div>
-      </article>
-      <article class="card">
-        <img src="images/Metropolitano.jpg" class="photo stadium-photo" alt="Civitas Metropolitano">
-        <h3>סיביטאס מטרופוליטאנו</h3>
-        <p class="address">Madrid, Spain</p>
-        <p>הבית של אתלטיקו מדריד. אצטדיון מודרני עם אווירה חשמלית.</p>
-        <div class="links"><a href="https://www.atleticodemadrid.com/en/stadium-tour" target="_blank">ביקור רשמי ↗</a></div>
-      </article>
-    </div></section>
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; }
+    body { 
+      margin: 0; 
+      background: var(--bg); 
+      color: var(--ink); 
+      font-family: 'Heebo', system-ui, sans-serif; 
+      line-height: 1.6; 
+    }
+    a { color: inherit; text-decoration: none; transition: 0.3s; }
 
-    <section class="section" id="schedule"><div class="section-head"><h2>לו״ז משוער</h2><p class="section-intro">סבב בין הערים והמשחקים.</p></div><div class="days">
-      <div class="day"><div class="date">08.12</div><div class="city">ברצלונה</div><div>משחק ברצלונה ⚔ מנצ׳סטר סיטי</div></div>
-      <div class="day"><div class="date">12.12</div><div class="city">מדריד</div><div>משחק אתלטיקו ⚔ ולנסיה</div></div>
-      <div class="day"><div class="date">13.12</div><div class="city">מדריד</div><div>משחק ריאל מדריד ⚔ אוסאסונה</div></div>
-    </div></section>
+    /* Header & Hero */
+    .hero { 
+      color: #fff; 
+      background: radial-gradient(circle at 0% 0%, #2c3e50 0%, var(--navy-main) 50%, var(--navy-dark) 100%); 
+      padding: 120px 22px 200px; 
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+      opacity: 0.1; pointer-events: none;
+    }
 
-    <section class="section" id="kosher"><div class="section-head"><h2>כשרות ומסעדות</h2><p class="section-intro">איפה לאכול כשר בערים הגדולות.</p></div><div class="cards">
-      <article class="card"><h3>ברצלונה</h3><p>חיפוש מסעדות כשרות במרכז העיר ובקרבת הרובע היהודי.</p><div class="links"><a href="https://www.google.com/maps/search/kosher+restaurants+barcelona" target="_blank">חיפוש בגוגל מפות ↗</a></div></article>
-      <article class="card"><h3>מדריד</h3><p>מסעדות כשרות מומלצות באזור מרכז העיר.</p><div class="links"><a href="https://www.google.com/maps/search/kosher+restaurants+madrid" target="_blank">חיפוש בגוגל מפות ↗</a></div></article>
-    </div></section>
+    .topbar { 
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      max-width: 1120px; margin: auto; 
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 22px; 
+      backdrop-filter: blur(12px); 
+      background: rgba(10, 15, 29, 0.8);
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { font-weight: 900; font-size: 1.2rem; letter-spacing: -0.5px; display: flex; align-items: center; gap: 8px; }
+    .flag { font-size: 1.4rem; }
+    .share { 
+      border: 0; border-radius: 50px; padding: 8px 20px; 
+      background: linear-gradient(135deg, var(--gold), var(--gold-light)); 
+      color: var(--navy-dark); font-weight: 700; cursor: pointer; 
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      transition: 0.3s;
+    }
+    .share:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4); }
 
-    <section class="section" id="synagogues"><div class="section-head"><h2>בתי כנסת וחב״ד</h2><p class="section-intro">נקודות התקהלות ותפילה.</p></div><div class="cards">
-      <article class="card"><h3>חב״ד ברצלונה</h3><p>ליווי למטיילים, תפילות ואוכל כשר.</p><div class="links"><a href="https://www.chabad.org/il/location/4420/hospitality" target="_blank">אתר חב״ד ↗</a></div></article>
-      <article class="card"><h3>חב״ד מדריד</h3><p>ליווי למטיילים, תפילות ואוכל כשר.</p><div class="links"><a href="https://www.chabad.org/il/location/4445/hospitality" target="_blank">אתר חב״ד ↗</a></div></article>
-    </div></section>
+    .hero-inner { 
+      position: relative; max-width: 1120px; margin: auto; 
+      text-align: right; padding-top: 40px; 
+    }
+    .eyebrow { 
+      color: var(--gold); font-size: 1.1rem; font-weight: 700; 
+      text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: block;
+    }
+    .hero h1 { 
+      font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; 
+      margin: 0 0 20px; font-weight: 900; letter-spacing: -2px; 
+    }
+    .hero p { 
+      font-size: clamp(1.1rem, 2vw, 1.4rem); max-width: 700px; 
+      color: #cbd5e1; font-weight: 300; margin-right: 0; 
+    }
 
-    <section class="section"><h2>צ׳ק ליסט לנסיעה</h2><div class="checklist">
-      <div class="check"><input type="checkbox"> דרכון בתוקף</div>
-      <div class="check"><input type="checkbox"> ביטוח נסיעות</div>
-      <div class="check"><input type="checkbox"> כרטיסי טיסה ומלון</div>
-      <div class="check"><input type="checkbox"> כרטיסים למשחקים</div>
-    </div></section>
+    /* Quick Navigation */
+    .container { padding: 0 22px 80px; margin-top: -100px; position: relative; z-index: 10; }
+    .quick { 
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; 
+      margin-bottom: 60px; 
+    }
+    .quick a { 
+      background: var(--white); border-radius: 24px; padding: 20px; 
+      text-decoration: none; box-shadow: var(--shadow-sm); 
+      font-size: 1.1rem; font-weight: 700; display: flex; 
+      flex-direction: column; align-items: center; justify-content: center; 
+      text-align: center; gap: 12px; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid transparent;
+    }
+    .quick a:hover { 
+      transform: translateY(-8px); 
+      box-shadow: var(--shadow-lg); 
+      border-color: var(--gold); 
+    }
+    .quick span { font-size: 2rem; }
+
+    /* Sections */
+    .section { margin: 80px 0; }
+    .section-head { margin-bottom: 32px; text-align: right; }
+    .section h2 { 
+      font-size: clamp(1.8rem, 4vw, 2.5rem); margin: 0; 
+      color: var(--navy-dark); font-weight: 900; letter-spacing: -1px; 
+    }
+    .section-intro { color: var(--muted); font-size: 1.1rem; margin-top: 8px; }
+
+    /* Match Cards */
+    .matches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .match { 
+      background: var(--white); border-radius: 32px; padding: 32px 24px; 
+      box-shadow: var(--shadow-sm); border: 1px solid var(--line); 
+      text-align: center; transition: 0.3s;
+    }
+    .match:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    
+    .teams { 
+      direction: ltr; display: flex; align-items: center; 
+      justify-content: center; gap: 20px; margin-bottom: 24px; 
+    }
+    .team { 
+      display: flex; flex-direction: column; align-items: center; gap: 12px; 
+      width: 100px; font-weight: 700; font-size: 0.9rem; 
+    }
+    .badge-wrap { 
+      width: 80px; height: 80px; border-radius: 50%; background: #f8fafc; 
+      border: 2px solid #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.08); 
+      display: flex; align-items: center; justify-content: center; padding: 15px; 
+    }
+    .team-logo { width: 100%; height: 100%; object-fit: contain; }
+    .versus { 
+      font-weight: 900; color: var(--gold); font-size: 1.5rem; 
+      font-style: italic; background: #f1f5f9; width: 40px; height: 40px; 
+      display: flex; align-items: center; justify-content: center; border-radius: 50%;
+    }
+    .match h3 { margin: 20px 0 10px; font-size: 1.4rem; font-weight: 800; }
+    .date { color: var(--muted); font-weight: 400; margin-bottom: 20px; }
+    
+    .badge { 
+      display: inline-block; border-radius: 50px; padding: 4px 14px; 
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase; 
+    }
+    .badge-success { background: #dcfce7; color: #166534; }
+    .badge-warn { background: #fef9c3; color: #854d0e; }
+    .badge-danger { background: #fee2e2; color: #991b1b; }
+
+    /* Stadium Cards */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card { 
+      background: var(--white); border-radius: 32px; overflow: hidden; 
+      box-shadow: var(--shadow-sm); border: 1px solid var(--line); 
+      transition: 0.3s; 
+    }
+    .card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+    .card img.photo { 
+      width: 100%; height: 220px; object-fit: cover; 
+      transition: 0.5s; 
+    }
+    .card:hover img.photo { transform: scale(1.05); }
+    .card-content { padding: 24px; }
+    .card h3 { margin: 0 0 8px; font-size: 1.4rem; font-weight: 800; color: var(--navy-dark); }
+    .address { 
+      font-size: 0.9rem; font-weight: 700; color: var(--gold); 
+      display: block; margin-bottom: 12px; 
+    }
+    .card p { color: var(--muted); font-size: 1rem; margin-bottom: 20px; }
+
+    /* General Elements */
+    .links { display: flex; gap: 12px; }
+    .links a { 
+      font-size: 0.9rem; font-weight: 700; color: #2563eb; 
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+    .links a:hover { color: var(--navy-dark); }
+    .notice { 
+      background: #fffbeb; border-right: 6px solid var(--gold); 
+      padding: 20px; border-radius: 16px; margin-top: 30px; 
+      font-weight: 500; color: #92400e;
+    }
+
+    /* Schedule & Checklist */
+    .days { display: grid; gap: 16px; }
+    .day { 
+      background: var(--white); padding: 20px; border-radius: 20px; 
+      display: grid; grid-template-columns: 100px 150px 1fr; 
+      align-items: center; box-shadow: var(--shadow-sm);
+      border: 1px solid var(--line);
+    }
+    .day .date { color: var(--gold); font-weight: 800; font-size: 1.2rem; margin: 0; }
+    .day .city { font-weight: 800; color: var(--navy-main); }
+
+    .checklist { display: grid; gap: 12px; max-width: 600px; }
+    .check { 
+      background: var(--white); padding: 16px 24px; border-radius: 16px; 
+      display: flex; align-items: center; gap: 15px; 
+      box-shadow: var(--shadow-sm); border: 1px solid var(--line);
+      cursor: pointer; transition: 0.2s;
+    }
+    .check:hover { background: #f1f5f9; }
+    .check input { width: 20px; height: 20px; accent-color: var(--gold); }
+
+    .footer { 
+      text-align: center; padding: 60px 20px; background: var(--navy-dark); 
+      color: #94a3b8; margin-top: 100px;
+    }
+    .footer p { margin: 5px 0; }
+    .small { font-size: 0.8rem; opacity: 0.6; }
+
+    /* Responsive */
+    @media(max-width:992px){
+      .matches, .cards { grid-template-columns: repeat(2, 1fr); }
+      .quick { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media(max-width:640px){
+      .hero { padding-bottom: 160px; }
+      .topbar { padding: 12px 16px; }
+      .quick, .matches, .cards { grid-template-columns: 1fr; }
+      .day { grid-template-columns: 1fr; gap: 8px; text-align: center; }
+      .hero h1 { font-size: 2.8rem; }
+    }
+  </style>  
+</head>  
+<body>  
+  <header class="hero" id="top">
+    <nav class="topbar">
+      <div class="brand"><span class="flag">🇪🇸</span> Spain 2026</div>
+      <button class="share" id="share">↗ שתפו את המדריך</button>
+    </nav>
+    <div class="hero-inner">
+      <span class="eyebrow">הטיול שלנו · ברצלונה + מדריד</span>
+      <h1>כדורגל, חברים<br>וזיכרונות בספרד</h1>
+      <p>מדריך אחד עם משחקים, אצטדיונים, מסעדות כשרות, כתובות של בתי כנסת וחב״ד, וקישורים רשמיים לבדיקה לפני הנסיעה.</p>
+    </div>
+  </header>  
+
+  <main class="container">  
+    <div class="quick">
+      <a href="#matches"><span>⚽</span>משחקים</a>
+      <a href="#stadiums"><span>🏟️</span>אצטדיונים</a>
+      <a href="#schedule"><span>🗓️</span>לו״ז</a>
+      <a href="#kosher"><span>🍽️</span>כשרות</a>
+      <a href="#synagogues"><span>🕍</span>בתי כנסת</a>
+    </div>  
+
+    <section class="section" id="matches">
+      <div class="section-head">
+        <h2>המשחקים שבדרך</h2>
+        <p class="section-intro">סמלי הקבוצות מוצגים כעת בתוך מסגרת עגולה אחידה, כדי שכולם ייראו באותו גודל וברמת דיוק זהה.</p>
+      </div>
+      <div class="matches">  
+        <article class="match">
+          <div class="teams">
+            <div class="team"><span class="badge-wrap"><img class="team-logo" src="images/Barcelona.png" alt="לוגו ברצלונה"></span><span>ברצלונה</span></div>
+            <span class="versus">⚔</span>
+            <div class="team"><span class="badge-wrap"><img class="team-logo" src="images/City.png" alt="לוגו מנצ׳סטר סיטי"></span><span>מנצ׳סטר סיטי</span></div>
+          </div>
+          <span class="badge badge-success">מאומת לפי התכנון</span>
+          <h3>ברצלונה ⚔ מנצ׳סטר סיטי</h3>
+          <div class="date">📅 08.12.2026 · ⏰ 21:00</div>
+          <div class="links"><a href="https://www.fcbarcelona.com/en/football/first-team/schedule" target="_blank">לוח משחקים רשמי ↗</a></div>
+        </article>  
+
+        <article class="match">
+          <div class="teams">
+            <div class="team"><span class="badge-wrap"><img class="team-logo" src="images/RealMadrid.png" alt="לוגו ריאל מדריד"></span><span>ריאל מדריד</span></div>
+            <span class="versus">⚔</span>
+            <div class="team"><span class="badge-wrap"><img class="team-logo" src="images/Osasuna.png" alt="לוגו אוסאסונה"></span><span>אוסאסונה</span></div>
+          </div>
+          <span class="badge badge-warn">שעה טרם נקבעה</span>
+          <h3>ריאל מדריד ⚔ אוסאסונה</h3>
+          <div class="date">📅 13.12.2026</div>
+          <div class="links"><a href="https://www.realmadrid.com/en/football/games" target="_blank">לוח משחקים רשמי ↗</a></div>
+        </article>  
+
+        <article class="match">
+          <div class="teams">
+            <div class="team"><span class="badge-wrap"><img class="team-logo" src="images/Atletico.png" alt="לוגו אתלטיקו מדריד"></span><span>אתלטיקו</span></div>
+            <span class="versus">⚔</span>
+            <div class="team"><span class="badge-wrap"><img class="team-logo" src="images/Valencia.png" alt="לוגו ולנסיה"></span><span>ולנסיה</span></div>
+          </div>
+          <span class="badge badge-danger">לבדוק תאריך ושעה</span>
+          <h3>אתלטיקו מדריד ⚔ ולנסיה</h3>
+          <div class="date">📅 12–13.12.2026</div>
+          <div class="links"><a href="https://en.atleticodemadrid.com/first-team/fixtures" target="_blank">לוח משחקים רשמי ↗</a></div>
+        </article>  
+      </div>
+      <div class="notice"><strong>⚠️ חשוב:</strong> יש לאמת את התאריך, השעה, האצטדיון והכרטיסים מול האתר הרשמי או לה־ליגה.</div>
+    </section>  
+
+    <section class="section" id="stadiums">
+      <div class="section-head">
+        <h2>האצטדיונים</h2>
+        <p class="section-intro">הארמונות של הכדורגל הספרדי.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="images/CampNou.jpg" class="photo" alt="Camp Nou">
+          <div class="card-content">
+            <h3>ספוטיפיי קאמפ נואו</h3>
+            <span class="address">Barcelona, Spain</span>
+            <p>הבית של ברצלונה. אחד האצטדיונים הגדולים והמפורסמים בעולם.</p>
+            <div class="links"><a href="https://www.fcbarcelona.com/en/visit-barcelona/camp-nou" target="_blank">ביקור רשמי ↗</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/Bernabeu.jpg" class="photo" alt="Santiago Bernabéu">
+          <div class="card-content">
+            <h3>סנטיאגו ברנבאו</h3>
+            <span class="address">Madrid, Spain</span>
+            <p>הבית של ריאל מדריד. מקדש של כדורגל עם שדרוג מודרני מדהים.</p>
+            <div class="links"><a href="https://www.realmadrid.com/en/tour-bernabeu" target="_blank">ביקור רשמי ↗</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/Metropolitano.jpg" class="photo" alt="Civitas Metropolitano">
+          <div class="card-content">
+            <h3>סיביטאס מטרופוליטאנו</h3>
+            <span class="address">Madrid, Spain</span>
+            <p>הבית של אתלטיקו מדריד. אצטדיון מודרני עם אווירה חשמלית.</p>
+            <div class="links"><a href="https://www.atleticodemadrid.com/en/stadium-tour" target="_blank">ביקור רשמי ↗</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="schedule">
+      <div class="section-head">
+        <h2>לו״ז משוער</h2>
+        <p class="section-intro">סבב בין הערים והמשחקים.</p>
+      </div>
+      <div class="days">
+        <div class="day"><div class="date">08.12</div><div class="city">ברצלונה</div><div>משחק ברצלונה ⚔ מנצ׳סטר סיטי</div></div>
+        <div class="day"><div class="date">12.12</div><div class="city">מדריד</div><div>משחק אתלטיקו ⚔ ולנסיה</div></div>
+        <div class="day"><div class="date">13.12</div><div class="city">מדריד</div><div>משחק ריאל מדריד ⚔ אוסאסונה</div></div>
+      </div>
+    </section>
+
+    <section class="section" id="kosher">
+      <div class="section-head">
+        <h2>כשרות ומסעדות</h2>
+        <p class="section-intro">איפה לאכול כשר בערים הגדולות.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-content">
+            <h3>ברצלונה</h3>
+            <p>חיפוש מסעדות כשרות במרכז העיר ובקרבת הרובע היהודי.</p>
+            <div class="links"><a href="https://www.google.com/maps/search/kosher+restaurants+barcelona" target="_blank">חיפוש בגוגל מפות ↗</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-content">
+            <h3>מדריד</h3>
+            <p>מסעדות כשרות מומלצות באזור מרכז העיר.</p>
+            <div class="links"><a href="https://www.google.com/maps/search/kosher+restaurants+madrid" target="_blank">חיפוש בגוגל מפות ↗</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="synagogues">
+      <div class="section-head">
+        <h2>בתי כנסת וחב״ד</h2>
+        <p class="section-intro">נקודות התקהלות ותפילה.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-content">
+            <h3>חב״ד ברצלונה</h3>
+            <p>ליווי למטיילים, תפילות ואוכל כשר.</p>
+            <div class="links"><a href="https://www.chabad.org/il/location/4420/hospitality" target="_blank">אתר חב״ד ↗</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-content">
+            <h3>חב״ד מדריד</h3>
+            <p>ליווי למטיילים, תפילות ואוכל כשר.</p>
+            <div class="links"><a href="https://www.chabad.org/il/location/4445/hospitality" target="_blank">אתר חב״ד ↗</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>צ׳ק ליסט לנסיעה</h2>
+      </div>
+      <div class="checklist">
+        <label class="check"><input type="checkbox"> דרכון בתוקף</label>
+        <label class="check"><input type="checkbox"> ביטוח נסיעות</label>
+        <label class="check"><input type="checkbox"> כרטיסי טיסה ומלון</label>
+        <label class="check"><input type="checkbox"> כרטיסים למשחקים</label>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><p>© 2026 ספרד | הטיול שלנו</p><p class="small">בנייה עצמאית למען החברים</p></footer>
-  <script>document.getElementById('share').onclick=()=>{if(navigator.share){navigator.share({title:'ספרד 2026',url:window.location.href})}else{alert('העתק את הלינק מהדפדפן!')}}</script>
+
+  <footer class="footer">
+    <p>© 2026 ספרד | הטיול שלנו</p>
+    <p class="small">בנייה עצמאית למען החברים</p>
+  </footer>
+
+  <script>
+    document.getElementById('share').onclick=()=>{
+      if(navigator.share){
+        navigator.share({title:'ספרד 2026',url:window.location.href})
+      }else{
+        alert('העתק את הלינק מהדפדפן!')
+      }
+    }
+  </script>
 </body>
 </html>
